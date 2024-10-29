@@ -5,7 +5,7 @@ const posts = ref()
 
 async function fetchPosts() {
   try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+    const response = await fetch(import.meta.env.VITE_POSTS_URL)
     if (!response.ok) {
       throw new Error('Network response was not ok')
     }

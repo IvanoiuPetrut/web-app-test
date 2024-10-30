@@ -17,6 +17,7 @@ async function fetchPosts() {
 }
 
 onMounted(() => {
+  console.log(import.meta.env.VITE_POSTS_URL)
   fetchPosts()
 })
 </script>
